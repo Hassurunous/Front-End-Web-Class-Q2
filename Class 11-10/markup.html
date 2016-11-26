@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="main.css" media="screen" title="no title">
+    <title></title>
+</head>
+
+<body onload="onLoad()">
+    <div class="img">
+        <img src="../logo bitmap.png" alt="" />
+    </div>
+    <div id="inputContainer" class="container">
+        <div id="display">
+        </div>
+        <div id="inputReference" style="display: none;">
+            <div id="initLogin" class="initLogin inputContainer">
+                <div class="col-5">
+                    <a href="#loginForm" id="loginBtn" class="col-12 navLoginBtn">Log In</a>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-5">
+                    <a href="#signupForm" id="signupBtn" class="col-12 navLoginBtn">Sign Up</a>
+                </div>
+                <div class="container">
+                    <p class="col-12">OR</p>
+                </div>
+                <div class="thirdPartyLogin container">
+                    <a href="#"><input type="image" src="fblogin.png" name="name" class="col-12"></a>
+                    <a href="#"><input type="image" src="googlelogin.png" name="name" class="col-12"></a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-12">
+                    <p class="col-12">Welcome!</p>
+                </div>
+            </div>
+            <div id="loginForm" class="inputContainer">
+                <form class="loginForm" action="markup.html" method="post">
+                    <div>
+                        <label for="email">Email:</label>
+                    </div>
+                    <div>
+                        <input type="email" required id="email" placeholder="email@example.com">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                    </div>
+                    <div>
+                        <input type="password" required id="password" placeholder="Password">
+                    </div>
+                    <a href="" id="backLoginBtn" class="col-5 navLoginBtn">Back</a>
+                    <div class="col-2"></div>
+                    <a href=""><button type="submit" id="submitLoginBtn" class="col-5 navLoginBtn">Submit</button></a>
+                </form>
+            </div>
+            <div id="signupForm" class="inputContainer">
+                <form class="loginForm" action="markup.html" method="post">
+                    <div>
+                        <label for="email">Email:</label>
+                    </div>
+                    <div>
+                        <input type="email" required id="suEmail" placeholder="email@example.com">
+                    </div>
+                    <div>
+                        <label for="suPassword">Password:</label>
+                    </div>
+                    <div>
+                        <input type="password" required id="suPassword" placeholder="Password">
+                    </div>
+                    <div>
+                        <label for="confirmPwd">Confirm Password:</label>
+                    </div>
+                    <div>
+                        <input type="password" required id="confirmPwd" placeholder="Confirm Password">
+                    </div>
+                    <a href="" id="backSignupBtn" class="col-5 navLoginBtn">Back</a>
+                    <div class="col-2"></div>
+                    <a href=""><button type="submit" id="submitSignupBtn" class="col-5 navLoginBtn">Submit</button></a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
