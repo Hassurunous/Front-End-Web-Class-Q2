@@ -53,17 +53,19 @@ function onLoad() {
         // gameArray[i][0] = idSelector;
         // gameArray[i][1] = randomizedTiles[i];
         gameTiles[i] = new Tile(idSelector, randomizedTiles[i]);
+        //console.log(gameTiles[i].color);
         // console.log(idSelector, backgroundColor);
-        // $(idSelector).text(i + 1).css("background-color", "black");
+        $(idSelector + ' .flipper .back').text(i + 1).css("background-color", gameTiles[i].color);
     }
     // console.log(gameArray);
     console.log(JSON.stringify(gameTiles));
+    flipTimerActive = false;
 }
 
 function flipTile(tile) {
     var tileSelector = tile.id + ' .flipper';
     console.log(tileSelector);
-    $(tileSelector).toggleClass('flipped');
+    $(tileSelector).toggleClass('flipped', true);
 }
 
 function tileMatch(tile1, tile2) {
@@ -76,8 +78,8 @@ function tileMatch(tile1, tile2) {
     flipTimerActive = true;
     flipTimer = setTimeout(function() {
         if (tile1.color != tile2.color) {
-            $(tile1.id + ' .flipper').toggleClass('flipped');
-            $(tile2.id + ' .flipper').toggleClass('flipped');
+            $(tile1.id + ' .flipper').toggleClass('flipped', false);
+            $(tile2.id + ' .flipper').toggleClass('flipped', false);
         } else {
             console.log("It's a match!");
             tile1.matched = true;
@@ -147,3 +149,12 @@ $(document).ready(function() {
         }
     });
 });
+
+// Reset the game so you can play again.
+function reset(callback) {
+    flipTimerActive = true;
+    randomizedTiles = shuffle(tileArray);
+    gameTiles = [];
+    $("[id*='tile'] .flipper").toggleClass('flipped', false);
+    var shuffleCards = setTimeout(callback, 600);
+}

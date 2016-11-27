@@ -105,29 +105,29 @@ h1 {
     perspective: 800px;
     position: relative;
 }
-.flip-container .flipper .flipped {
+.flipped {
     transform: rotatey(-180deg);
 }
-.flip-container .flipper {
+.flipper {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: 0.5s;
 }
-.flip-container .flipper .face {
+.face {
     width: 100%;
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
     z-index: 2;
 }
-.flip-container .flipper .front {
+.front {
     position: absolute;
     background-color: black;
     z-index: 1;
     cursor: pointer;
 }
-.flip-container .flipper .back {
+.back {
     transform: rotatey(-180deg);
     cursor: pointer;
 }
