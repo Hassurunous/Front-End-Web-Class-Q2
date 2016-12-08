@@ -1,0 +1,143 @@
+html, body {
+    width: 400px;
+    height: 100%;
+    margin: auto;
+    /*box-sizing: border-box;*/
+}
+
+.appcontainer {
+    background-image: radial-gradient(1000px at 50% 50%, rgba(0,255,241,0.43) 0%, rgba(0,176,255,0.61) 34%, #000176 67%, #00091A 100%);
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.background-land {
+  width: 100%;
+  position: absolute;;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.background-tree {
+  width: 100%;
+  position: absolute;;
+  bottom: 100px;
+  left: 0;
+  z-index: 2;
+}
+
+.foreground-l {
+  position: absolute;
+  bottom: 84px;
+  left: 20px;
+  z-index: 3;
+}
+
+.foreground-r {
+  position: absolute;
+  bottom: 94px;
+  right: 20px;
+  z-index: 3;
+}
+
+#weathericon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 0;
+}
+
+.row {
+    width: 100%;
+}
+
+.dropdown {
+    height: 35px;
+    font-size: 1.2em;
+    line-height: 35px;
+    margin: 0;
+}
+
+.dd-city {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dd-date {
+  text-align: center;
+}
+
+.dd-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid blue;
+  float: right;
+  position: relative;
+  top: 12px;
+  right: 7px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid white;
+}
+
+.col-1 {
+    width: 8.3333%;
+}
+
+.col-2 {
+    width: 16.6666%;
+}
+
+.col-3 {
+    width: 24.9999%;
+}
+
+.col-4 {
+    width: 33.3333%;
+}
+
+.col-5 {
+    width: 41.6666%;
+}
+
+.col-6 {
+    width: 49.9999%;
+    position: relative;
+}
+
+.col-7 {
+    width: 58.3333%;
+}
+
+.col-8 {
+    width: 66.6666%;
+}
+
+.col-9 {
+    width: 74.9999%;
+}
+
+.col-10 {
+    width: 83.3333%;
+}
+
+.col-11 {
+    width: 91.6666%;
+}
+
+.col-12 {
+    width: 99.9999%;
+}

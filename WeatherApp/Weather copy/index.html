@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Some elements with ids you can display your weather data here. -->
+        <div id="app">
+            <!-- Temperature -->
+            <div class="temp hide-when-empty">
+                <div id="temp" class="biggest temp-current"></div>
+                <div class="temp-min-max">
+                    <div class="smaller"> min <span id="temp_min"></span></div>
+                    <div class="smaller"> max <span id="temp_max"></span></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <!-- Location Name -->
+            <div class="location hide-when-empty">
+                <div id="location-name" class="big"></div>
+                <div>
+                    <div id="coords" class="small"></div>
+                </div>
+            </div>
+
+            <!-- Weather Icon -->
+            <div id="icon"></div>
+
+
+            <!-- Weather Description -->
+            <div class="weather-description hide-when-empty">
+                <div>
+                    <div id="weather-main" class="bigger"></div>
+                    <div>
+                        <div id="desc" class="medium"></div>
+                    </div>
+                </div>
+
+                <!-- Weather Details -->
+                <div class="weather-details hide-when-empty" class="small">
+                    <div class="lighter">Pressure: <span id="pressure" class="bright"></span></div>
+                    <div class="lighter">Humidity: <span id="humidity" class="bright"></span></div>
+                    
+                    <div class="lighter">Wind: 
+                        <span id="speed" class="bright"></span>
+                        <span id="deg" class="bright"></span>
+                    </div>
+                    
+                    <div class="lighter">Clouds: <span id="clouds" class="bright"></span></div>
+
+                    <div class="medium">Date: <span id="dt" class="bright"></span></div>
+                    <div class="lighter">Sunrise: <span id="sunrise" class="bright"></span></div>
+                    <div class="lighter">Sunset: <span id="sunset" class="bright"></span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="options">
+            <button id="save-city-button" class="option-button hide-when-empty">
+                <svg width="58px" height="52px" viewBox="282 465 58 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <path d="M299.184273,505.009109 C299.281337,505.111184 299.379956,505.212323 299.480129,505.312496 L311.165368,516.997735 L334.236225,493.926879 C340.691223,487.47188 340.689804,477.00998 334.236225,470.5564 C327.880128,464.200303 317.638972,464.104293 311.165179,470.264306 C311.066961,470.160954 310.96715,470.058561 310.865747,469.957157 C304.410748,463.502159 293.948848,463.503578 287.495268,469.957157 C281.04027,476.412156 281.041689,486.874056 287.495268,493.327636 L299.180508,505.012875 L299.184273,505.009109 L299.184273,505.009109 Z" id="Combined-Shape" stroke="none" fill="#FFFFFF" fill-rule="evenodd" opacity="0.535495924"></path>
+                </svg>
+            </button>
+
+            <button id="location-button" class="option-button">
+                <svg width="51px" height="61px" viewBox="286 562 51 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <path d="M293.67767,569.67767 C303.440777,559.914562 319.267755,559.912416 329.033009,569.67767 C338.796116,579.440777 338.798263,595.267755 329.033009,605.033009 L311.355339,622.710678 L293.67767,605.033009 C283.914562,595.269901 283.912416,579.442923 293.67767,569.67767 Z" id="Rectangle-2" stroke="none" fill="#FFFFFF" fill-rule="evenodd" opacity="0.535495924"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- A form allows us ot input the name of a city. Submiting the form weather for that city. -->
+    <div class="city-form-container">
+        <!-- Feel free to edit the markup used here -->
+        <form id="city-form" class="alert-box" action="#" method="get">
+            <p class="alert-heading">City</p>
+            <p class="alert-subheading">Enter the name of a city</p>
+            <div>
+                <label for="city-input">City</label>
+                <input id="city-input">
+            </div>
+            <div>
+                <button class="left-alert-button" type="submit">Submit</button>
+            </div>
+            <div>
+                <button class="right-alert-button">Cancel</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

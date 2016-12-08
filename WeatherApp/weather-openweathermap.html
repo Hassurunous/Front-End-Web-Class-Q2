@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+
+    This is a starter project for a simple weather app. Your goal is to design and style
+    this weather app. Start by creating a design in Sketch, then modify and style your
+    html document to match your design as closely as possible.
+
+    TODO:
+
+    You will want to format and adjust the output you are displaying from the data loaded.
+    You might also want to modify the markup. This could be adding class names to elements.
+
+    Styles:
+
+    Add CSS to style all of the elements. Style all of the elements. Pay attention to fonts
+    and colors. Bonus points for using weather data to modify styles. For example try setting
+    background color to match the temp, or time of day (or both...).
+
+    Icons:
+
+    The weather service provides an "icon" string which represents an image the current weather.
+    You need to make an image for each possible weather situation. Look below for notes. There
+    is a link to the icon and weather status code below.
+
+    Challenges:
+
+    1) Show a 5 day forecast.
+    2) Show the 5 day forecast in another view and allow us to switch views with a transition.
+    3) Save more than one weather forecast in a list.
+    4) Save multiple weather forecasts and show each in a view side by side.
+
+-->
+
+
+<!-- Some elements with ids you can display your weather data here. -->
+<div id="app">
+    <!-- You may want to rearrange and edit the markup used here -->
+    <div>Coords:<div id="coords"></div></div>
+    <div>Weather:<div id="weather-main"></div></div>
+    <div>Description:<div id="desc"></div></div>
+    <div id="icon"></div>
+    <div>Temp:<div id="temp"></div></div>
+    <div>Min:<div id="temp_min"></div></div>
+    <div>Max:<div id="temp_max"></div></div>
+    <div>Pressure:<div id="pressure"></div></div>
+    <div>Humidity:<div id="humidity"></div></div>
+    <div>Wind Speed:<div id="speed"></div></div>
+    <div>Degree:<div id="deg"></div></div>
+    <div>Clouds:<div id="clouds"></div></div>
+    <div>Date:<div id="dt"></div></div>
+    <div>Sunrise:<div id="sunrise"></div></div>
+    <div>Sunset:<div id="sunset"></div></div>
+    <div>Location:<div id="location-name"></div></div>
+</div>
+
+<!-- A form allows us ot input the name of a city. Submiting the form weather for that city. -->
+<div>
+    <!-- Feel free to edit the markup used here -->
+    <form id="city-form" action="#" method="get">
+        <div>
+            <label for="city-input">City</label>
+            <input id="city-input">
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <div>
+        <button id="save-city-button">Save City</button>
+    </div>
+</div>
+
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="main.js" charset="utf-8"></script>
