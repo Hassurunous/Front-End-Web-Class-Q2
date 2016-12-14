@@ -1,3 +1,7 @@
+/*--------------------
+    Grid System
+--------------------*/
+
 html, body {
     width: 400px;
     height: 100%;
@@ -6,7 +10,8 @@ html, body {
 }
 
 .appcontainer {
-    background-image: radial-gradient(1000px at 50% 50%, rgba(0,255,241,0.43) 0%, rgba(0,176,255,0.61) 34%, #000176 67%, #00091A 100%);
+    position: absolute;
+    background-image: radial-gradient(1000px at 50% 50%, rgba(0, 255, 241, 0.43) 0%, rgba(0, 176, 255, 0.61) 34%, #000176 67%, #00091A 100%);
     height: 100%;
 }
 
@@ -16,81 +21,8 @@ html, body {
     position: relative;
 }
 
-.background-land {
-  width: 100%;
-  position: absolute;;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.background-tree {
-  width: 100%;
-  position: absolute;;
-  bottom: 100px;
-  left: 0;
-  z-index: 2;
-}
-
-.foreground-l {
-  position: absolute;
-  bottom: 84px;
-  left: 20px;
-  z-index: 3;
-}
-
-.foreground-r {
-  position: absolute;
-  bottom: 94px;
-  right: 20px;
-  z-index: 3;
-}
-
-#weathericon {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  z-index: 0;
-}
-
 .row {
     width: 100%;
-}
-
-.dropdown {
-    height: 35px;
-    font-size: 1.2em;
-    line-height: 35px;
-    margin: 0;
-}
-
-.dd-city {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.dd-date {
-  text-align: center;
-}
-
-.dd-arrow {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid blue;
-  float: right;
-  position: relative;
-  top: 12px;
-  right: 7px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 2px solid white;
 }
 
 .col-1 {
@@ -140,4 +72,176 @@ table, th, td {
 
 .col-12 {
     width: 99.9999%;
+}
+
+
+/*--------------------
+     App Images
+--------------------*/
+
+.background-land {
+    width: 100%;
+    position: absolute;
+    ;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.foreground-l {
+    position: absolute;
+    bottom: 84px;
+    left: 20px;
+    z-index: 3;
+}
+
+.foreground-r {
+    position: absolute;
+    bottom: 94px;
+    right: 20px;
+    z-index: 3;
+}
+
+
+/*--------------------
+    Weather Info
+--------------------*/
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    color: white;
+}
+
+#selectors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#icon {
+    position: absolute;
+    top: 20%;
+    left: 45px;
+    z-index: 0;
+}
+
+#wind img {
+    width: 65%;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    z-index: 0;
+}
+
+#current-temp-f h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 200;
+    font-size: 5.5em;
+    z-index: 1;
+    margin: 0;
+    padding: 25px 10px;
+}
+
+#current-temp-c h1 {
+    position: absolute;
+    top: 15px;
+    left: 140px;
+    font-weight: 200;
+    font-size: 3em;
+    z-index: 1;
+    margin: 0;
+    padding: 25px 10px;
+}
+
+.degree {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0;
+}
+
+#current-temp-f + .label {
+    position: absolute;
+    top: 67px;
+    left: 112px;
+    font-size: 3em;
+    font-weight: 200;
+}
+
+#current-temp-c + .label {
+    position: absolute;
+    top: 64px;
+    left: 206px;
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+#humidity {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    font-weight: 200;
+    font-size: 1.5em;
+    z-index: 1;
+    margin: 0;
+    padding: 25px 10px;
+}
+
+#wind-speed {
+    position: absolute;
+    top: 47px;
+    right: 0;
+    font-weight: 200;
+    font-size: 2.3em;
+    z-index: 1;
+    margin: 0;
+    padding: 25px 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/*--------------------
+    Top Dropdown
+--------------------*/
+
+.dropdown {
+    height: 35px;
+    font-size: 1.2em;
+    line-height: 35px;
+    margin: 0;
+}
+
+.dd-city {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dd-date {
+    text-align: center;
+}
+
+.dd-arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid blue;
+    float: right;
+    position: relative;
+    top: 12px;
+    right: 7px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid white;
 }

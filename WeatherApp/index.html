@@ -11,28 +11,47 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body onload="loadWeatherForLocation()">
 
     <!-- YOUR CONTENT GOES HERE -->
     <div class="appcontainer container">
-        <table class="container">
+        <table id="selectors" class="container">
             <tr class="row">
-                <td class="col-8">
-                    <div id="city-select" class="col-12" type="button" name="cityselector">
+                <td class="col-7">
+                    <div id="city-selector" class="col-12" type="button" name="cityselector">
                         <div class="dd-arrow"></div>
-                        <p class="dropdown dd-city">San Francisco</p>
+                        <p id="city-name" class="dropdown dd-city">San Francisco</p>
                     </div>
                 </td>
-                <td class="col-4">
+                <td class="col-5">
                     <div id="date-select" class="dropdown dd-date col-12" style="text-align: center" type="button" name="dateselector">00/00/0000<div class="dd-arrow"></div></div>
                 </td>
             </tr>
+            <tr id="city-form" class="hidden">
+                <td>
+                    <form action="index.html" method="post">
+
+                    </form>
+                </td>
+            </tr>
         </table>
-        <img class="background-land" src="images/BackgroundLand.png" alt="" />
-        <img class="background-tree" src="images/BackgroundTree.png" alt="" />
-        <img id="weathericon" src="images/Sun.png" alt="" height="300px" />
-        <img class="foreground-l" src="images/Warli Male.png" alt="" height="150px">
-        <img class="foreground-r" src="images/Warli Female.png" alt="" height="150px">
+        <div id="current-temp-f"></div>
+        <div class="label">F</div>
+        <div id="current-temp-c"></div>
+        <div class="label">C</div>
+        <div id="wind-speed"></div>
+        <div id="humidity"></div>
+        <div id="wind">
+            <img src="images/Wind.png" width="50%" alt="">
+        </div>
+        <div id="background">
+            <img class="background-land" src="images/BackgroundLand.png" alt="" />
+        </div>
+        <div id="icon"></div>
+        <div id="foreground">
+            <img class="foreground-l" src="images/Warli Male.png" alt="" height="150px">
+            <img class="foreground-r" src="images/Warli Female.png" alt="" height="150px">
+        </div>
     </div>
 
     <!-- JavaScript: placed at the end of the document so the pages load faster -->
